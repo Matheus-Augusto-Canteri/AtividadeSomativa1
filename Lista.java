@@ -19,7 +19,7 @@ public class Lista {
     }
 
     public void insereDepois(No no, int info) {
-        if (no == null) {
+        if (no == null || info == 0) {  
             System.out.println("Não é possível enviar um nó nulo!");
             return;
         }
