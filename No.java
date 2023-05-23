@@ -2,9 +2,9 @@ public class No {
     private Integer informarcao;
     private No proximo;
 
-    public No() {
-        informarcao = null;
-        proximo = null;
+    public No(int info) { 
+        this.informarcao = info;
+        this.proximo = null;
     }
 
     public void setInfo(Integer informarcao) {

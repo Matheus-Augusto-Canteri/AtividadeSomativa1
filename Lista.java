@@ -11,11 +11,24 @@ public class Lista {
     }
 
     public void inserePrimeiro(int info) {
-        No noAuxiliar = new No();
+        No noAuxiliar = new No(info);
         noAuxiliar.setInfo(info);
         noAuxiliar.setProx(primeiro);
         primeiro = noAuxiliar;
-        System.out.println("O número " + info + " foi inserido no início da lista.");
+        System.out.println("\nO número " + info + " foi inserido no início da lista.");
+    }
+
+    public void insereDepois(No no, int info) {
+        if (no == null) {
+            System.out.println("Não é possível enviar um nó nulo!");
+            return;
+        }
+
+        No noAuxiliar = new No(info);
+        noAuxiliar.setProx(no.getProx());
+        no.setProx(noAuxiliar);
+
+        System.out.println("\nO número " + info + " inserido após o nó " + no.getInfo() + ".");
     }
 
     public void insereUltimo(int info) {
@@ -28,10 +41,10 @@ public class Lista {
             }
 
             if (auxiliar.getProx() == null) {
-                No novo = new No();
+                No novo = new No(info);
                 novo.setInfo(info);
                 auxiliar.setProx(novo);
-                System.out.println("O número " + info + " foi inserido no final da lista.");
+                System.out.println("\nO número " + info + " foi inserido no final da lista.");
             }
 
         }
@@ -51,6 +64,12 @@ public class Lista {
             auxiliar = auxiliar.getProx();
         }
 
+        System.out.println("\n----------------------");
+    }
+
+
+    public No getPrimeiro() {
+        return primeiro;
     }
 
 }
