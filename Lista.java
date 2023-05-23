@@ -7,7 +7,7 @@ public class Lista {
     }
 
     public boolean vazia() {
-            return primeiro == null;
+        return primeiro == null;
     }
 
     public void inserePrimeiro(int info) {
@@ -27,7 +27,7 @@ public class Lista {
                 auxiliar = auxiliar.getProx();
             }
 
-            if(auxiliar.getProx() == null){
+            if (auxiliar.getProx() == null) {
                 No novo = new No();
                 novo.setInfo(info);
                 auxiliar.setProx(novo);
@@ -52,6 +52,5 @@ public class Lista {
         }
 
     }
-
 
 }
