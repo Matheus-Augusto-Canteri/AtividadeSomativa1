@@ -23,7 +23,11 @@ public class Main {
 
         lista.mostrar();
 
-        lista.remove(200);
+        lista.remove(10);
+
+        lista.mostrar();
+
+        lista.removeUltimo();
 
         lista.mostrar();
         }

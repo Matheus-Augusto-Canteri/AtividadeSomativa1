@@ -19,7 +19,7 @@ public class Lista {
     }
 
     public void insereDepois(No no, int info) {
-        if (no == null || info == 0) {  
+        if (no == null || info == 0) {
             System.out.println("Não é possível enviar um nó nulo!");
             return;
         }
@@ -52,13 +52,13 @@ public class Lista {
     }
 
     public void remove(int info) {
-        if (info == 0) {  
+        if (info == 0) {
             System.out.println("Não é possível remover um nó que não existe!");
             return;
         }
 
-       No noAuxiliar = primeiro;
-       No primeiro = null;
+        No noAuxiliar = primeiro;
+        No primeiro = null;
 
         while (noAuxiliar != null && noAuxiliar.getInfo() != info) {
             primeiro = noAuxiliar;
@@ -69,9 +69,29 @@ public class Lista {
             primeiro.setProx(noAuxiliar.getProx());
         }
 
-      System.out.println("\nO nó " + info + " foi removido da lista.");
+        System.out.println("\nO nó " + info + " foi removido da lista.");
     }
 
+    public void removeUltimo() {
+        if (vazia()) {
+            System.out.println("A lista está vazia");
+            return;
+        }
+
+        if (primeiro.getProx() == null) {
+            primeiro = null;
+            return;
+        }
+
+        No auxiliar = primeiro;
+
+        while (auxiliar.getProx().getProx() != null) {
+            auxiliar = auxiliar.getProx();
+        }
+
+        System.out.println("O último nó foi removido da lista.");
+        auxiliar.setProx(null);
+    }
 
     public void mostrar() {
         if (vazia()) {
