@@ -23,5 +23,8 @@ public class Main {
 
         lista.mostrar();
 
+        lista.remove(200);
+
+        lista.mostrar();
         }
     }

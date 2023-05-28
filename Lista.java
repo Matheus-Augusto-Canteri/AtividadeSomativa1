@@ -51,6 +51,28 @@ public class Lista {
 
     }
 
+    public void remove(int info) {
+        if (info == 0) {  
+            System.out.println("Não é possível remover um nó que não existe!");
+            return;
+        }
+
+       No noAuxiliar = primeiro;
+       No primeiro = null;
+
+        while (noAuxiliar != null && noAuxiliar.getInfo() != info) {
+            primeiro = noAuxiliar;
+            noAuxiliar = noAuxiliar.getProx();
+        }
+
+        if (noAuxiliar != null) {
+            primeiro.setProx(noAuxiliar.getProx());
+        }
+
+      System.out.println("\nO nó " + info + " foi removido da lista.");
+    }
+
+
     public void mostrar() {
         if (vazia()) {
             System.out.println("A lista está vazia");

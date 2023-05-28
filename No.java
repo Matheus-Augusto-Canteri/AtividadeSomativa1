@@ -1,14 +1,14 @@
 public class No {
-    private Integer informarcao;
+    private Integer informacao;
     private No proximo;
 
     public No(int info) { 
-        this.informarcao = info;
+        this.informacao = info;
         this.proximo = null;
     }
 
-    public void setInfo(Integer informarcao) {
-        this.informarcao = informarcao;
+    public void setInfo(Integer informacao) {
+        this.informacao = informacao;
     }
 
     public void setProx(No proximo) {
@@ -20,7 +20,7 @@ public class No {
     }
 
     public Integer getInfo() {
-        return this.informarcao;
+        return this.informacao;
     }
 
 }
