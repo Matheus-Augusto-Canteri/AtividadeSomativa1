@@ -1,3 +1,5 @@
+// Júlia de Lima Becher, Matheus Canteri, Eduarda de Campos e Lorenzzo Deboni
+
 public class Lista {
 
     private No primeiro;
@@ -20,7 +22,7 @@ public class Lista {
 
     public void insereDepois(No no, int info) {
         if (no == null || info == 0) {  
-            System.out.println("Não é possível enviar um nó nulo!");
+            System.out.println("Não é possível enviar um número nulo!");
             return;
         }
 
@@ -65,7 +67,7 @@ public class Lista {
             primeiro = primeiro.getProx();
         }
 
-        System.out.println("O primeiro nó foi removido da lista.");
+        System.out.println("\nO primeiro número foi removido da lista.");
         }
     
     public void removeUltimo() {
@@ -85,10 +87,9 @@ public class Lista {
             auxiliar = auxiliar.getProx();
         }
 
-        System.out.println("O último nó foi removido da lista.");
+        System.out.println("\nO último número foi removido da lista.");
         auxiliar.setProx(null);
     }
-
     
 
 
@@ -99,7 +100,7 @@ public class Lista {
         }
 
        No noAuxiliar = primeiro;
-       No primeiro = null;
+       primeiro = null;
 
         while (noAuxiliar != null && noAuxiliar.getInfo() != info) {
             primeiro = noAuxiliar;
@@ -110,7 +111,7 @@ public class Lista {
             primeiro.setProx(noAuxiliar.getProx());
         }
 
-      System.out.println("\nO nó " + info + " foi removido da lista.");
+      System.out.println("\nO número " + info + " foi removido da lista.");
     }
 
 

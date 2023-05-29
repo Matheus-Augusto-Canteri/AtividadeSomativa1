@@ -1,3 +1,5 @@
+// Júlia de Lima Becher, Matheus Canteri, Eduarda de Campos e Lorenzzo Deboni
+
 public class No {
     private Integer informacao;
     private No proximo;

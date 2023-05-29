@@ -1,3 +1,5 @@
+// Júlia de Lima Becher, Matheus Canteri, Eduarda de Campos e Lorenzzo Deboni
+
 public class Main {
     public static void main(String[] args) {
 
@@ -23,7 +25,15 @@ public class Main {
 
         lista.mostrar();
 
-        lista.remove(200);
+        lista.remove(10);
+
+        lista.mostrar();
+
+        lista.removePrimeiro();
+
+        lista.mostrar();
+
+        lista.removeUltimo();
 
         lista.mostrar();
         }
