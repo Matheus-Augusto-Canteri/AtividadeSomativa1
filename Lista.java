@@ -50,6 +50,47 @@ public class Lista {
         }
 
     }
+    
+    public void removePrimeiro() {
+        if (vazia()) {
+            System.out.println("A lista está vazia");
+            return;
+        }
+
+        if (primeiro.getProx() == null) {
+            // A lista contém apenas um nó
+            primeiro = null;
+        } else {
+            // A lista contém mais de um nó
+            primeiro = primeiro.getProx();
+        }
+
+        System.out.println("O primeiro nó foi removido da lista.");
+        }
+    
+    public void removeUltimo() {
+        if (vazia()) {
+            System.out.println("A lista está vazia");
+            return;
+        }
+
+        if (primeiro.getProx() == null) {
+            primeiro = null;
+            return;
+        }
+
+        No auxiliar = primeiro;
+
+        while (auxiliar.getProx().getProx() != null) {
+            auxiliar = auxiliar.getProx();
+        }
+
+        System.out.println("O último nó foi removido da lista.");
+        auxiliar.setProx(null);
+    }
+
+    
+
 
     public void remove(int info) {
         if (info == 0) {  
